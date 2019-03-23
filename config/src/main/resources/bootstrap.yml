@@ -9,5 +9,5 @@ spring:
         git:
           uri: https://github.com/p180j/spring-cloud-config.git
           search-paths: config-repo
-          username: p180j
-          password: 93xiaofang
+          username: git账号
+          password: git密码
