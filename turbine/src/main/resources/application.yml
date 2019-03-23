@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: hystrix-dashboard-turbine
+server:
+  port: 8004
+turbine:
+  app-config: spring-cloud-node1,spring-cloud-node2   #需要监控的服务
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+  instanceUrlSuffix: /hystrix.stream          #由于默认是/actuator/hystrix.stream，所以在此需要重新声明一下
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@peer1:8000/eureka/,http://admin:admin@peer2:8001/eureka/  #注册中心
