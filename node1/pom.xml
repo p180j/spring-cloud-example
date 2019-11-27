@@ -47,8 +47,12 @@
 			<artifactId>spring-cloud-netflix-hystrix-dashboard</artifactId>
 			<version>1.4.4.RELEASE</version>
 		</dependency>
+		<!--监控端点jar包-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 	</dependencies>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

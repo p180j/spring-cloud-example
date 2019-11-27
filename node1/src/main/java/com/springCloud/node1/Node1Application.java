@@ -18,14 +18,6 @@ public class Node1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Node1Application.class, args);
 	}
-
-
-	/**
-	 * @author pengjw
-	 * @date 2019/3/23 16:45
-	 * @return org.springframework.boot.web.servlet.ServletRegistrationBean
-	 *@description   由于出现访问http://localhost:8004/turbine.stream 时出现404，配置完了就ok了
-	 */
 	@Bean
 	public ServletRegistrationBean getServlet() {
 		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();

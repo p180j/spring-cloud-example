@@ -12,4 +12,4 @@ turbine:
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:admin@peer1:8000/eureka/,http://admin:admin@peer2:8001/eureka/  #注册中心
+      defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/  #注册中心

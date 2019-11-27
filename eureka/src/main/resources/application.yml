@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: eureka-server   # 服务名称
+
+
+---
+# 高可用一
+spring:
+  profiles: peer1
+  security:
+    user:
+      name: admin
+      password: admin
+server:
+  port: 8000
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://admin:admin@peer2:8001/eureka/
+
+---
+# 高可用二
+spring:
+  profiles: peer2
+  security:
+    user:
+      name: admin
+      password: admin
+server:
+  port: 8001
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://admin:admin@peer1:8000/eureka/
+

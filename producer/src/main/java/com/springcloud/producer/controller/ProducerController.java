@@ -11,11 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version 1.0
  */
 @RestController
+@RequestMapping("producer")
 public class ProducerController {
 
     @RequestMapping("/hello")
     public String index(@RequestParam String name) {
         return "hello "+name+"，this is first messge";
     }
+
+    @RequestMapping("/output")
+    public String output() {
+        return "output";
+    }
+
 
 }
